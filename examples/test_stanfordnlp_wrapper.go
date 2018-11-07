@@ -12,8 +12,8 @@ func main() {
 		err    error
 	)
 
-	path := "/home/kya/Documents/stanford-postagger-full-2018-10-16/"
-	modelPath := fmt.Sprintf("%s/models/chinese-distsim.tagger", path)
+	path := "/home/kya/go/src/github.com/kyajpauley/stanford-pos-tagger/examples"
+	modelPath := fmt.Sprintf("%s/chinese-distsim.tagger", path)
 	taggerPath := fmt.Sprintf("%s/stanford-postagger.jar", path)
 
 	tagger, err = pos_tagger.NewTagger(modelPath, taggerPath)
