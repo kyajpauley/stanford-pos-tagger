@@ -12,9 +12,9 @@ func main() {
 		err    error
 	)
 
-	path := "/home/kya/go/src/github.com/kyajpauley/stanford-pos-tagger/examples"
-	modelPath := fmt.Sprintf("%s/chinese-distsim.tagger", path)
-	taggerPath := fmt.Sprintf("%s/stanford-postagger.jar", path)
+	//needs to be the path relative to the pos_tagger.go file, or the absolute path on your system
+	modelPath := "examples/chinese-distsim.tagger"
+	taggerPath := "examples/stanford-postagger.jar"
 
 	tagger, err = pos_tagger.NewTagger(modelPath, taggerPath)
 	if err != nil {
