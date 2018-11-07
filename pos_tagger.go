@@ -181,8 +181,8 @@ func (p *Tagger) parse(out string) []*Result {
 			split = strings.Split(word, "#")
 		}
 		res[i] = &Result{
-			Word: split[0],
-			TAG:  split[1],
+			Word: strings.TrimSpace(split[0]),
+			TAG:  strings.TrimSpace(split[1]),
 		}
 	}
 
